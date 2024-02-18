@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     matching_posts = Post.all
 
@@ -8,6 +9,7 @@ class PostsController < ApplicationController
   end
 
   def show
+
     the_id = params.fetch("path_id")
 
     matching_posts = Post.where({ :id => the_id })
